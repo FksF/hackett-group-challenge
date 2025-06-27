@@ -1,0 +1,124 @@
+@mixin text-style($size, $weight, $line-height, $color) {
+  font-size: $size + px;
+  font-weight: $weight;
+  line-height: $line-height + px;
+  color: $color;
+  margin: 0;
+}
+
+$green-primary: #305777;
+$green-dark: #234c5f;
+$green-light: #57A1A4;
+$white: #fff;
+$dark: #202e44;
+$light-dark: #68819D;
+$red: #ff693b;
+
+/* WHITE */
+.t-28-700-white {
+  @include text-style(28, 700, 32, $white);
+}
+.t-20-700-white {
+  @include text-style(20, 700, 28, $white);
+}
+.t-16-600-white {
+  @include text-style(16, 600, 24, $white);
+}
+.t-14-500-white {
+  @include text-style(14, 500, 20, $white);
+}
+.t-12-600-white {
+  @include text-style(12, 600, 18, $white);
+}
+.t-12-500-white {
+  @include text-style(12, 500, 18, $white);
+}
+.t-12-400-white {
+  @include text-style(12, 400, 16, $white);
+}
+
+/* PRIMARY */
+.t-40-600-primary {
+  @include text-style(40, 600, 48, $green-primary);
+}
+.t-24-700-primary {
+  @include text-style(24, 700, 36, $green-primary);
+}
+.t-20-600-primary {
+  @include text-style(20, 600, 28, $green-primary);
+}
+.t-20-700-primary {
+  @include text-style(20, 700, 28, $green-primary);
+}
+.t-16-700-primary {
+  @include text-style(16, 700, 24, $green-primary);
+}
+.t-14-600-primary {
+  @include text-style(14, 600, 20, $green-primary);
+}
+.t-14-500-primary {
+  @include text-style(14, 500, 18, $green-primary);
+}
+.t-14-400-primary {
+  @include text-style(14, 400, 20, $green-primary);
+}
+.t-12-600-primary {
+  @include text-style(12, 600, 16, $green-primary);
+}
+.t-12-400-primary {
+  @include text-style(12, 400, 16, $green-primary);
+}
+
+/* GREEN-DARK */
+.t-12-400-green-dark {
+  @include text-style(12, 400, 16, $green-dark);
+}
+.t-12-500-green-dark {
+  @include text-style(12, 500, 16, $green-dark);
+}
+
+/* DARK */
+.t-14-600-dark {
+  @include text-style(14, 600, 18, $dark);
+  font-family: "Montserrat";
+}
+.t-14-500-dark {
+  @include text-style(14, 500, 20, $dark);
+  font-family: "Montserrat";
+}
+.t-14-400-dark {
+  @include text-style(14, 400, 20, $dark);
+  font-family: "Montserrat";
+}
+.t-12-500-dark {
+  @include text-style(12, 500, 18, $dark);
+  font-family: "Montserrat";
+}
+.t-12-400-dark {
+  @include text-style(12, 400, 18, $dark);
+  font-family: "Montserrat";
+}
+
+/* LIGHT-DARK */
+.t-16-600-light-dark {
+  @include text-style(16, 600, 24, $light-dark);
+  font-family: "Montserrat";
+}
+.t-14-600-light-dark {
+  @include text-style(14, 600, 20, $light-dark);
+  font-family: "Montserrat";
+}
+.t-12-400-light-dark {
+  @include text-style(12, 400, 16, $light-dark);
+  font-family: "Montserrat";
+}
+
+/* GREEN-LIGHT */
+.t-14-500-green-light {
+  @include text-style(14, 500, 18, $green-light);
+}
+
+/* RED */
+.t-12-500-red {
+  @include text-style(12, 500, 18, $red);
+}
