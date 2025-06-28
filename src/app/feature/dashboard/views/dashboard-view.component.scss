@@ -34,4 +34,8 @@ app-vehicle-ownership-chart, app-population-chart {
   .chart-block {
     max-width: 100%;
   }
+  app-vehicle-ownership-chart, app-population-chart {
+    max-width: 420px;
+    min-height: 220px;
+  }
 }

@@ -148,18 +148,11 @@
 
 @media (max-width: 900px) {
   .main-card {
-    padding: 16px 4px;
-    width: 100%;
+    padding: 22px 20px;
+    width: 80%;
   }
   .sidebar {
-    width: 70px;
     padding: 12px 0;
-  }
-  .sidebar-menu a span,
-  .sidebar-user .user-name,
-  .sidebar-user .user-role,
-  .sidebar-signout span {
-    display: none;
   }
 }
 
@@ -179,5 +172,56 @@
     &.active {
       border-bottom: 2px solid #9beaa1;
     }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .logo {
+    margin-right: -100px;
+    z-index: 1000;
+  }
+
+  .main-card {
+    padding: 22px 20px;
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-menu a {
+    justify-content: center;
+    padding: 12px 0;
+    gap: 0;
+  }
+
+  .sidebar-menu a img {
+    margin: 0;
+  }
+
+  .sidebar-menu a,
+  .sidebar-signout,
+  .sidebar-user {
+    font-size: 0;
+  }
+
+  .sidebar-menu a img,
+  .sidebar-signout img,
+  .sidebar-user .avatar {
+    font-size: initial;
+  }
+
+  .sidebar-menu a::after,
+  .sidebar-menu a span,
+  .sidebar-menu a div,
+  .sidebar-signout span,
+  .sidebar-user > div {
+    display: none !important;
+  }
+
+  .sidebar-user {
+    margin: 20px auto;
   }
 }
