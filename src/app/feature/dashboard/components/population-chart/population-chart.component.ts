@@ -92,9 +92,6 @@ export class PopulationChartComponent
     if (window.innerWidth <= 600) {
       canvas.width = 500;
       canvas.height = 250;
-    } else {
-      canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 700;
-      canvas.height = 400;
     }
     this.chart = new Chart(canvas, {
       type: "line",
@@ -104,7 +101,7 @@ export class PopulationChartComponent
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: window.innerWidth <= 600 ? false : true,
         plugins: {
           legend: { display: true },
         },
