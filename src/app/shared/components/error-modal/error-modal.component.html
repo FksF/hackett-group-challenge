@@ -7,8 +7,8 @@
 >
   <ng-template pTemplate="header">
     <div class="flex flex-column">
-      <img src="assets/icons/sp_alert.svg" width="56" height="56" alt="" />
-      <span class="t-20-600-primary">{{ errorBody?.description ? errorBody?.description : 'No tienes conexión a internet.'}}</span>
+      <img src="assets/icons/bell.svg" width="56" height="56" alt="" />
+      <span class="t-20-600-primary mt-4">{{ errorBody?.description ? errorBody?.description : 'Oops! Something went wrong'}}</span>
     </div>
   </ng-template>
   <ng-template pTemplate="closeicon">
@@ -26,8 +26,7 @@
       <li class="t-14-400-dark" *ngFor="let error of errorBody.detail">{{error}}</li>
     </ul>    
     <p class="t-14-400-dark" *ngIf="errorBody && errorBody.detail && errorBody.detail.length === 1">{{ errorBody.detail[0] }}</p>
-    <p class="t-14-400-dark" *ngIf="!errorBody">Por favor, inténtalo nuevamente.</p>
-    <p class="t-14-400-dark" *ngIf="!errorBody?.description">Por favor, verifica tu conexión e inténtalo nuevamente.</p>
+    <p class="t-14-400-dark" *ngIf="!errorBody?.description">Please check your connection and try again.</p>
   </ng-template>
   <ng-template pTemplate="footer" class="pt-5">
     <p-button label="Aceptar" (click)="closeModal()"></p-button>

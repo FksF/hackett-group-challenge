@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, OnDestroy, AfterViewInit } fr
 import Chart from 'chart.js/auto';
 import { DatausaService } from '../../services/datausa.service';
 import { VehicleOwnershipResponse, VehicleOwnershipData } from '../../models/vehicle-ownership.model';
+import { ErrorModalService } from 'src/app/shared/services/error-modal-service.service';
 
 @Component({
   selector: 'app-vehicle-ownership-chart',
@@ -17,7 +18,7 @@ export class VehicleOwnershipChartComponent implements OnInit, AfterViewInit, On
   private dataReady = false;
   private viewReady = false;
 
-  constructor(private datausa: DatausaService) {}
+  constructor(private datausa: DatausaService, private errorModalService: ErrorModalService) {}
 
   ngOnInit() {
     this.datausa.getVehicleOwnershipData().subscribe({
@@ -30,6 +31,7 @@ export class VehicleOwnershipChartComponent implements OnInit, AfterViewInit, On
       },
       error: (err) => {
         console.error('Error loading vehicle data:', err);
+        this.errorModalService.show();
         this.error = 'Error loading vehicle data';
       }
     });
