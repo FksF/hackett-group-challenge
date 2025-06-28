@@ -8,7 +8,7 @@
     "build": "ng build",
     "build:dev": "ng build --configuration development",
     "build:cert": "ng build --configuration certification",
-    "build:prod": "ng build --configuration production",
+    "build:prod": "ng build --configuration production --base-href /hackett-group-challenge/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --code-coverage"
   },
