@@ -87,7 +87,16 @@ export class PopulationChartComponent
     if (this.chart) {
       this.chart.destroy();
     }
-    this.chart = new Chart(this.populationChartRef.nativeElement, {
+    
+    const canvas = this.populationChartRef.nativeElement;
+    if (window.innerWidth <= 600) {
+      canvas.width = 500;
+      canvas.height = 250;
+    } else {
+      canvas.width = canvas.parentElement ? canvas.parentElement.clientWidth : 700;
+      canvas.height = 400;
+    }
+    this.chart = new Chart(canvas, {
       type: "line",
       data: {
         labels: this.chartLabels,
@@ -95,6 +104,7 @@ export class PopulationChartComponent
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { display: true },
         },
