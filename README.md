@@ -1,27 +1,49 @@
-# HackettGroupChallenge
+# The Hackett Group - Frontend Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## Objective
 
-## Development server
+This Angular application visualizes two charts using data from the [DataUSA API](https://datausa.io/). The charts display:
+- **Multi-Axis Line Chart**: Population trends for Alabama, Florida, and California (2013-2021).
+- **Pie Chart**: Distribution of US households by vehicle ownership in 2021.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Approach & Implementation Details
 
-## Code scaffolding
+### 1. **Project Structure**
+- **Angular** is used as the main framework.
+- **Chart.js** is integrated for chart rendering.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 2. **Data Fetching**
+- **Population Data**: Fetched from `https://datausa.io/api/data?drilldowns=State&measures=Population`.
+- **Vehicle Ownership Data**: Fetched from `https://datausa.io/api/data?measure=Commute%20Means%20by%20Gender&geo=01000US&drilldowns=Vehicles%20Available`.
 
-## Build
+### 3. **Chart Components**
+- **PopulationChartComponent**: Renders a multi-line chart for the population of the three states across years.
+- **VehicleOwnershipChartComponent**: Renders a pie chart for vehicle ownership distribution.
+- Both components are responsive and styled to match the template.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 4. **UI/UX**
+- **Responsiveness**: Layout and charts adapt to different screen sizes.
 
-## Running unit tests
+### 5. **Styling**
+- Uses CSS variables and SCSS for maintainable and scalable styles.
+- All colors, fonts, and spacings are matched to the template as closely as possible.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Additional Notes
 
-## Running end-to-end tests
+- **Extensibility**: The app is modular and can be extended with more charts or features.
+- **Accessibility**: Basic accessibility practices are followed (alt texts, semantic HTML).
+- **Assets**: All SVGs and images are placed in the `assets` folder as per the template.
+- **Dependencies**: Ensure to run `npm install` to install all required packages.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## How to Run
 
-## Further help
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   ng serve
+   ```
+3. Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
