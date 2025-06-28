@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
-    pathMatch: 'full'
+    loadChildren: () => import('./feature/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
     path: '**',

@@ -1,87 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 @import "assets/scss/typography.scss";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+
 :root {
-  --hackett-primary: #0F335B;
-  --hackett-secondary: #4D5358;
-  --hackett-background: #EBF3FA;
-  --hackett-sidebar: #E3EFF8;
-  --hackett-border: #D9E7F5;
+  --hackett-primary: #0f335b;
+  --hackett-secondary: #4d5358;
+  --hackett-background: #ebf3fa;
+  --hackett-sidebar: #e3eff8;
+  --hackett-border: #d9e7f5;
 }
 
 body {
   margin: 0;
-  font-family: "open-sans", sans-serif;
-}
-
-.grecaptcha-badge {
-  display: none;
-}
-
-.p-button {
-  border-radius: 8px;
-  background: #9beaa1;
-  color: #202e44;
-  border: transparent;
-  font-family: "open-sans", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 16px;
-  width: 100%;
-  min-height: 36px;
-}
-
-.p-button.p-button-outlined {
-  background-color: transparent;
-  color: #8095ac;
-  border: 1px solid #8095ac;
-}
-
-.p-button.p-button-link {
-  background: transparent;
-  border: transparent;
-}
-
-.content-box {
-  background-color: var(--cripto-white-700);
-  @media (max-width: 768px) {
-    border-radius: 15px 16px 0 0;
-    margin-top: -10px;
-    max-width: 100%;
-  }
-  border-radius: 0;
-  margin-top: 0;
-  margin: 0 auto;
-  min-height: calc(100vh - 80px);
-  padding: 2rem;
-  max-width: 700px;
-}
-
-.p-inputtext {
-  border-radius: 8px;
-  min-height: 48px;
-}
-
-.result {
-  background: #305777;
-  min-height: 100vh;
-
-  &_content {
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(84, 158, 163, 0.5) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -2px;
-    padding: 0 2rem 2rem 2rem;
-  }
-}
-
-.p-toast {
-  width: 20rem;
+  font-family: "Open Sans", "open-sans", sans-serif;
 }

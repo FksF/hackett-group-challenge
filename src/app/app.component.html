@@ -1,3 +1,45 @@
+<div class="app-layout">
+  <div class="main-sidebar">
+    <div class="sidebar-header">
+      <img src="assets/icons/logo.svg" alt="The Hackett Group" class="logo" />
+    </div>
+    <aside class="sidebar">
+      <nav class="sidebar-menu">
+        <a class="active">
+          <img src="assets/icons/home.svg" alt="Dashboard" />
+          Dashboard
+        </a>
+        <a>
+          <img src="assets/icons/users.svg" alt="Accounts" />
+          Accounts
+        </a>
+        <a>
+          <img src="assets/icons/sync.svg" alt="Activities" />
+          Activities
+        </a>
+      </nav>
+      <div class="sidebar-user">
+        <img src="assets/icons/john.png" alt="User" class="avatar" />
+        <div>
+          <div class="user-name">John Smith</div>
+          <div class="user-role">Principal</div>
+        </div>
+      </div>
+      <div class="sidebar-signout">
+        <img src="assets/icons/sign-out.svg" alt="Sign Out" />
+        <span>Sign Out</span>
+      </div>
+    </aside>
+  </div>
+  <main class="main-content">
+    <div class="main-header">
+      <span></span>
+      <img src="assets/icons/bell.svg" alt="Notifications" class="bell" />
+    </div>
+    <div class="main-card">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
 <app-loading></app-loading>
-<router-outlet></router-outlet>
 <app-error-modal></app-error-modal>
